@@ -1,5 +1,6 @@
 
 import { Component, OnInit, Input } from '@angular/core';
+import { $ } from 'protractor';
 import { Satellite } from '../satellite';
 @Component({
   selector: 'app-orbit-list',
@@ -9,9 +10,11 @@ import { Satellite } from '../satellite';
 export class OrbitListComponent implements OnInit {
   @Input() satellites: Satellite[];
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor() { 
   }
-
-}
+  
+    ngOnInit() {
+      //console.log(JSON.stringify(this.satellites))
+    }
+  
+  }
